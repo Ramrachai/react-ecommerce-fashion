@@ -16,9 +16,12 @@ import banner from "../assets/images/banner.png";
 
 import { useDispatch } from "react-redux";
 import { clearItem } from "../redux/shopping-cart/cartItemsSlide";
+import styled from "styled-components";
 
 const Home = () => {
   let [searchParams, setSearchParams] = useSearchParams({});
+
+  const [modalIsOpen, setIsOpen] = React.useState(false);
 
   const dispatch = useDispatch();
   const paymentSuccess = searchParams.get("success");
@@ -26,6 +29,7 @@ const Home = () => {
   useEffect(() => {
     if (paymentSuccess) {
       dispatch(clearItem());
+      setIsOpen(true);
     }
   }, []);
 
@@ -78,6 +82,13 @@ const Home = () => {
       </Section>
       {/* end best selling section */}
 
+      {modalIsOpen && (
+        <PaymentMsg>
+          <h2>Payment is successful. Thank you for your order </h2>
+          <button onClick={() => setIsOpen(false)}> close </button>
+        </PaymentMsg>
+      )}
+
       {/* new arrival section */}
       <Section>
         <SectionTitle>New arrival </SectionTitle>
@@ -127,8 +138,42 @@ const Home = () => {
         </SectionBody>
       </Section>
       {/* end popular product section */}
+
+      {/* payment message modal   */}
     </Helmet>
   );
 };
 
 export default Home;
+
+const PaymentMsg = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: #27bb71;
+
+  padding: 10px 16px;
+
+  h2 {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-align: center;
+    color: white;
+    font-weight: 100;
+  }
+  button {
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #064e26;
+    border-radius: 2px;
+    padding: 3px 5px;
+    cursor: pointer;
+  }
+`;
