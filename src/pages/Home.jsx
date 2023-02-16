@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 
 import Helmet from "../components/Helmet";
 import HeroSlider from "../components/HeroSlider";
@@ -14,7 +14,21 @@ import productData from "../assets/fake-data/products";
 
 import banner from "../assets/images/banner.png";
 
+import { useDispatch } from "react-redux";
+import { clearItem } from "../redux/shopping-cart/cartItemsSlide";
+
 const Home = () => {
+  let [searchParams, setSearchParams] = useSearchParams({});
+
+  const dispatch = useDispatch();
+  const paymentSuccess = searchParams.get("success");
+
+  useEffect(() => {
+    if (paymentSuccess) {
+      dispatch(clearItem());
+    }
+  }, []);
+
   return (
     <Helmet title="Home page">
       {/* hero slider */}

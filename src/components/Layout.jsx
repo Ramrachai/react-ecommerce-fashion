@@ -1,30 +1,26 @@
-import React from 'react'
+import React from "react";
 
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter } from "react-router-dom";
 
-import Header from './Header'
-import Footer from './Footer'
-import ProductViewModal from './ProductViewModal'
+import Header from "./Header";
+import Footer from "./Footer";
+import ProductViewModal from "./ProductViewModal";
 
-import Routes from '../routes/Routes'
+import AllRoutes from "../routes/Routes";
 
 const Layout = () => {
-    return (
-        <BrowserRouter>
-            <Route render={props => (
-                <div>
-                    <Header {...props}/>
-                    <div className="container">
-                        <div className="main">
-                            <Routes/>
-                        </div>
-                    </div>
-                    <Footer/>
-                    <ProductViewModal/>
-                </div>
-            )}/>
-        </BrowserRouter>
-    )
-}
+  return (
+    <BrowserRouter basename="fashion">
+      <Header />
+      <div className="container">
+        <div className="main">
+          <AllRoutes />
+        </div>
+      </div>
+      <Footer />
+      <ProductViewModal />
+    </BrowserRouter>
+  );
+};
 
-export default Layout
+export default Layout;

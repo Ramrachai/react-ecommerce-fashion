@@ -1,19 +1,3 @@
-const product_01_image_01 =
-  require("../images/products/product-01 (1).jpg").default;
-const product_01_image_02 =
-  require("../images/products/product-01 (2).jpg").default;
-// const product_01_image_03 = require('../images/products/product-01 (3).jpg').default
-
-const product_02_image_01 =
-  require("../images/products/product-02 (1).jpg").default;
-const product_02_image_02 =
-  require("../images/products/product-02 (2).jpg").default;
-
-const product_03_image_01 =
-  require("../images/products/product-03 (1).jpg").default;
-const product_03_image_02 =
-  require("../images/products/product-03 (2).jpg").default;
-
 const product_04_image_01 =
   require("../images/products/product-04 (1).jpg").default;
 const product_04_image_02 =
@@ -23,11 +7,6 @@ const product_05_image_01 =
   require("../images/products/product-05 (1).jpg").default;
 const product_05_image_02 =
   require("../images/products/product-05 (2).jpg").default;
-
-const product_06_image_01 =
-  require("../images/products/product-06 (1).jpg").default;
-const product_06_image_02 =
-  require("../images/products/product-06 (2).jpg").default;
 
 const product_07_image_01 =
   require("../images/products/product-07 (1).jpg").default;
@@ -91,11 +70,6 @@ const product_18_image_01 =
 const product_18_image_02 =
   require("../images/products/product-18 (2).webp").default;
 
-const product_19_image_01 =
-  require("../images/products/product-19 (1).webp").default;
-const product_19_image_02 =
-  require("../images/products/product-19 (2).webp").default;
-
 const product_20_image_01 =
   require("../images/products/product-20 (1).webp").default;
 const product_20_image_02 =
@@ -114,18 +88,7 @@ const products = [
     description:
       "This cute floral top will enchance your everyday look. This cute floral top features a classic fit with a scoop neckline and short sleeves for a timeless look. The bright and cheerful design is perfect for adding a retro, feminine touch to any outfit. Crafted from a lightweight fabric with a hint of stretch, this top is comfortable to wear all day long. The smocking detail on the sleeves and back creates subtle visual interest and a figure-flattering shape A great wardrobe staple, this cute floral top is versatile enough to dress up or down and pair with any bottoms.",
   },
-  {
-    title: "Striped Sleeve Shirt",
-    slug: "striped-sleeve-shirt",
-    price: 45.0,
-    image01: product_19_image_01,
-    image19: product_19_image_02,
-    categorySlug: "top",
-    colors: ["white", "red", "blue"],
-    size: ["S", "M", "L"],
-    description:
-      "This stylish striped sleeve shirt is perfect for a night out. The bright and cheerful design is perfect for adding a retro, feminine touch to any outfit. Crafted from a lightweight fabric with a hint of stretch, this top is comfortable to wear all day long. The smocking detail on the sleeves and back creates subtle visual interest and a figure-flattering shape A great wardrobe staple, this cute floral top is versatile enough to dress up or down and pair with any bottoms.",
-  },
+
   {
     title: "High Waist Skinny Jeans",
     slug: "high-waist-skinny-jeans",
@@ -336,100 +299,3 @@ const productData = {
 };
 
 export default productData;
-
-const ProductData = [
-  {
-    title: "Cute Floral Top",
-    slug: "cute-floral-top",
-    price: 40.0,
-    image01: "http://example.com/cute-floral-top_001.jpg",
-    image02: "http://example.com/cute-floral-top_002.jpg",
-    categorySlug: "top",
-    colors: ["White", "Blue"],
-    size: ["S", "M", "L"],
-    description: "This cute floral top will enchance your everyday look.",
-  },
-  {
-    title: "Striped Sleeve Shirt",
-    slug: "striped-sleeve-shirt",
-    price: 45.0,
-    image01: "http://example.com/striped-sleeve-shirt_001.jpg",
-    image02: "http://example.com/striped-sleeve-shirt_002.jpg",
-    categorySlug: "top",
-    colors: ["Black", "White"],
-    size: ["S", "M", "L"],
-    description:
-      "This stylish striped sleeve shirt is perfect for a night out.",
-  },
-  {
-    title: "High Waist Skinny Jeans",
-    slug: "high-waist-skinny-jeans",
-    price: 80.0,
-    image01: "http://example.com/high-waist-skinny-jeans_001.jpg",
-    image02: "http://example.com/high-waist-skinny-jeans_002.jpg",
-    categorySlug: "bottoms",
-    colors: ["Indigo", "Dark Blue"],
-    size: ["6", "8", "10"],
-    description: "These high waist skinny jeans are a classic wardrobe staple.",
-  },
-  {
-    title: "Knee Length Skirt",
-    slug: "knee-length-skirt",
-    price: 60.0,
-    image01: "http://example.com/knee-length-skirt_001.jpg",
-    image02: "http://example.com/knee-length-skirt_002.jpg",
-    categorySlug: "bottoms",
-    colors: ["Silver", "Black"],
-    size: ["S", "M", "L"],
-    description:
-      "This knee length skirt is perfect for the office or a special event.",
-  },
-  {
-    title: "Off-Shoulder Dress",
-    slug: "off-shoulder-dress",
-    price: 75.0,
-    image01: "http://example.com/off-shoulder-dress_001.jpg",
-    image02: "http://example.com/off-shoulder-dress_002.jpg",
-    categorySlug: "dresses",
-    colors: ["Red", "Black"],
-    size: ["S", "M", "L"],
-    description:
-      "This off-shoulder dress is sure to make you stand out from the crowd.",
-  },
-  {
-    title: "Pink Floral Dress",
-    slug: "pink-floral-dress",
-    price: 90.0,
-    image01: "http://example.com/pink-floral-dress_001.jpg",
-    image02: "http://example.com/pink-floral-dress_002.jpg",
-    categorySlug: "dresses",
-    colors: ["Pink", "White"],
-    size: ["S", "M", "L"],
-    description:
-      "This beautiful pink floral dress is perfect for a special occasion.",
-  },
-  {
-    title: "Denim Jacket",
-    slug: "denim-jacket",
-    price: 55.0,
-    image01: "http://example.com/denim-jacket_001.jpg",
-    image02: "http://example.com/denim-jacket_002.jpg",
-    categorySlug: "outerwear",
-    colors: ["Blue", "Black"],
-    size: ["S", "M", "L"],
-    description:
-      "This stylish denim jacket will keep you warm in the cold weather.",
-  },
-  {
-    title: "Faux Fur Coat",
-    slug: "faux-fur-coat",
-    price: 150.0,
-    image01: "http://example.com/faux-fur-coat_001.jpg",
-    image02: "http://example.com/faux-fur-coat_002.jpg",
-    categorySlug: "outerwear",
-    colors: ["Beige", "Brown"],
-    size: ["S", "M", "L"],
-    description:
-      "This luxurious faux fur coat will add sophistication to your look.",
-  },
-];

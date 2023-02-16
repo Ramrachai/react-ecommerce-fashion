@@ -33,18 +33,12 @@ const ProductCard = (props) => {
         <Button
           size="sm"
           icon="bx bx-cart"
-          animate={true}
           onClick={() => dispatch(set(props.slug))}
         >
           quick shop
         </Button>
 
-        <Link
-          size="sm"
-          icon="bx shopping-bag"
-          animate={true}
-          to={`/catalog/${props.slug}`}
-        >
+        <Link size="sm" icon="bx shopping-bag" to={`/catalog/${props.slug}`}>
           Details
         </Link>
       </div>

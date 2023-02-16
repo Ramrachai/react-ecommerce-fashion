@@ -80,11 +80,7 @@ const HeroSliderItem = (props) => (
       </div>
       <div className="hero-slider__item__info__btn">
         <Link to={props.item.path}>
-          <Button
-            backgroundColor={props.item.color}
-            icon="bx bx-cart"
-            animate={true}
-          >
+          <Button backgroundColor={props.item.color} icon="bx bx-cart">
             Buy now
           </Button>
         </Link>

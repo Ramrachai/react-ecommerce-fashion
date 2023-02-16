@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 import Helmet from "../components/Helmet";
@@ -61,7 +61,29 @@ const Cart = () => {
             </div>
           </div>
           <div className="cart__info__btn">
-            <Button size="block">Checkout</Button>
+            {totalPrice > 0 ? (
+              <form
+                action={`http://stripe.hillmango.com/checkout/create-checkout-session/`}
+                method="POST"
+              >
+                <input
+                  type="hidden"
+                  name="product_name"
+                  value={`Total amount to pay:`}
+                />
+                <input
+                  type="hidden"
+                  name="price"
+                  value={(totalPrice + 25) * 100}
+                />
+                <Button size="block" type="submit">
+                  Checkout
+                </Button>
+              </form>
+            ) : (
+              false
+            )}
+
             <Link to="/catalog">
               <Button size="block">Continue Shopping</Button>
             </Link>
